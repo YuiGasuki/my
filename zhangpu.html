@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>占卜屋</title>
+<style>
+body {
+display:flex; 
+flex-direction:column;
+align-items:center;
+background-color:black;
+}
+form {
+margin-top:4cm;
+color:yellow;
+}
+div {
+margin-top:4cm;
+background-color:#702963;
+width:300px;
+height:500px;
+display:flex; 
+flex-direction:column;
+align-items:center;
+border-style:solid;
+border-color:yellow;
+}
+button {
+list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color:yellow;
+    border-style:solid;
+border-color:yellow;
+background-color:#0F52BA;
+}
+div p {
+color:yellow;
+}
+div input {
+background-color:#0F52BA;
+    border-style:solid;
+border-color:yellow;
+}
+.hy {
+color:red;
+}
+a {
+color:yellow;
+background-color: #0F52BA;
+text-decoration:none;
+font-size:130%;
+    border-style:solid;
+border-color:yellow;
+}
+}
+</style>
+</head>
+
+<body>
+<a href="index.html">主站</a>
+<div>
+<form action="">
+输入你要算的字:<br><input type="text" id="input">
+</form>
+<br>
+<button onclick="goFunction()">开始占卜</button>
+<p id="demo" ></p>
+<script>
+function goFunction(){
+	let x=document.getElementById('input').value;
+	if (x=="")
+	{
+	document.getElementById("demo").innerHTML="你这是故意为难我的吗";  
+	}
+    else
+    {
+    var r=Math.random();
+    if (r>0.5)
+    {
+   document.getElementById("demo").innerHTML="最近最好不要到黑洞旁边，否则有大凶";
+   }
+
+else if(r==0.5){
+	document.getElementById("demo").innerHTML="最近最好不要接近铀";
+}
+else{
+document.getElementById("demo").innerHTML="你在过完一天后你将会减少一天的生命";
+}
+    }
+//document.write(Date());
+}
+</script>
+</div>
+<br>
+<br>
+<p class="hy">仅供娱乐，切勿当真</p>
+</body>
+
+</html>
